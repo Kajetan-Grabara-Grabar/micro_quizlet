@@ -1,8 +1,6 @@
-import time #biblioteki programu
-with open ("micro.log","a+",encoding="UTF-8") as log:
-    t = time.localtime()
-    komunikat = time.strftime("%H:%M:%S", t)
-    komunikat+=" - Uruchomienie programu\n"
-    log.write(komunikat)
+#biblioteki programu
+import settings
+import log
+log.log("Uruchomienie programu")#wpisanie logu systemowego o starcie programu
 
 
