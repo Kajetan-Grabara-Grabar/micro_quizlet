@@ -1,5 +1,5 @@
+#Przyjmuje wartość string i wpisuje ją do pliku logów programu
 import time
-
 def log(message):
     with open ("micro.log","a+",encoding="UTF-8") as log: #wpisanie logu systemowego o starcie programu
         t = time.localtime()

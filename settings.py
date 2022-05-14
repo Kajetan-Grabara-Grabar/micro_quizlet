@@ -1,3 +1,7 @@
+#Zwraca wartośći true false zabrane z pliku settigns.json
+#Przyjmuje wartość true jeśli ustawienia mają zostać skonfigurowane
+#false jeśli program ma je po prostu odczytać
+#Jeśli dane są uszkodzone program przystąpi do autonaprawy
 import json
 import log
 text = ['Setting 1','Setting 2','Setting 3','Setting 4']
@@ -59,3 +63,5 @@ if __name__ == '__main__':
     print("Zmienne zwrócone przez program")
     for i in range(len(x)):
         print(x[i])
+
+
