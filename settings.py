@@ -1,6 +1,22 @@
 import json
 import log
 text = ['Setting 1','Setting 2','Setting 3','Setting 4']
+def make_settings():
+    setting = []
+    print("Konfiguracja ustawień")
+    log.log("Konfiguracja ustawień")
+    for i in range(len(text)):
+        cli = input(text[i]+" > ")
+        if str(cli).upper() == "TAK" or str(cli).upper() == "YES" or str(cli).upper() == "TRUE":
+            setting.append(True)
+            print("True")
+        else:
+            setting.append(False)
+            print("False")
+    return setting
+def write_settings(setting):
+    with open("settings.json","w+",encoding="UTF-8") as set:
+            json.dump(setting,set)
 def settings(set):
     if set:
         export = make_settings()
@@ -37,22 +53,7 @@ def settings(set):
             with open("settings.json","w+",encoding="UTF-8") as set:
                 json.dump(setting,set)
             return setting
-def make_settings():
-    setting = []
-    print("Konfiguracja ustawień")
-    log.log("Konfiguracja ustawień")
-    for i in range(len(text)):
-        cli = input(text[i]+" > ")
-        if str(cli).upper() == "TAK" or str(cli).upper() == "YES" or str(cli).upper() == "TRUE":
-            setting.append(True)
-            print("True")
-        else:
-            setting.append(False)
-            print("False")
-    return setting
-def write_settings(setting):
-    with open("settings.json","w+",encoding="UTF-8") as set:
-            json.dump(setting,set)
+
 if __name__ == '__main__':
     x = settings(False)
     print("Zmienne zwrócone przez program")
