@@ -13,6 +13,16 @@ def settings(set):
                 export = []
                 for i in range(len(setting)):
                     export.append(setting[i])
+                    if export[i] == True:
+                        continue
+                    elif export[i] == False:
+                        continue
+                    else:
+                        print("Błąd zgodności pliku settings.json")
+                        log.log("Błąd zgodności pliku settings.json")
+                        export = make_settings()
+                        write_settings(export)
+
                 if len(text)!=len(export):
                     print("Błąd zgodności pliku settings.json")
                     log.log("Błąd zgodności pliku settings.json")
