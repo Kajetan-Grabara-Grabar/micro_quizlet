@@ -4,10 +4,10 @@
 #Jeśli dane są uszkodzone program przystąpi do autonaprawy
 import json
 import log
-text = ['Setting 1','Setting 2','Setting 3','Setting 4']
+text = ['Automatyczne wyświetlanie pomocy','Automatyczne czyszczenie konsoli','Odwrócone hasła','Setting 4']
 def make_settings():
     setting = []
-    print("Konfiguracja ustawień")
+    print("Konfiguracja ustawień wpisz yes lub no")
     log.log("Konfiguracja ustawień")
     for i in range(len(text)):
         cli = input(text[i]+" > ")
