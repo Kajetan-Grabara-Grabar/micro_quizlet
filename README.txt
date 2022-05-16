@@ -11,3 +11,6 @@
 #exit - powrót do menu
 
 wpisz tekst niebędący komendą, aby otworzyć plik ze słówkami
+
+--Przykładowy plik ze słowkami do nauki--
+apple;jabłko
